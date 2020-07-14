@@ -1,0 +1,40 @@
+main: net.yama2211.ps.Main
+name: ${project.artifactId}
+version: ${project.version}
+
+commands:
+  pointtp:
+    description: Help Command
+  pointtp.setpoint:
+    description: SetPoint Command
+  pointtp.tp:
+    description: TPCommand
+  pointtp.reload:
+    description: Config Reload Command
+  pointtp.check:
+    description: Config Check Command
+
+permissions:
+  pointtp.setpoint:
+    description: SetPoint Command
+    default: op
+  pointtp.teleport:
+    description: TP Command
+    default: op
+  pointtp.cofreload:
+    description: Config Reload Command
+    default: op
+  pointtp.cofcheck:
+    description: Config Reload Command
+    default: op
+  pointtp.setjointp:
+    description: Jointp change Command
+    default: op
+  pointtp.*:
+    description: PointTP All Pex
+    default: op
+    children:
+      pointtp.setpoint: true
+      pointtp.teleport: true
+      pointtp.cofreload: true
+      pointtp.cofcheck: true
